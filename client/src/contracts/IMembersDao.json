@@ -1,0 +1,1239 @@
+{
+  "contractName": "IMembersDao",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "dao",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getAddrById",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "dao",
+          "type": "address"
+        }
+      ],
+      "name": "getMembersCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "dao",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "member",
+          "type": "address"
+        }
+      ],
+      "name": "getMemberInfo",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "enum Data.memberStatus",
+              "name": "status",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "joinTime",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Data.member[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "dao",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "member",
+          "type": "address"
+        }
+      ],
+      "name": "isActiveMember",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"dao\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getAddrById\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"dao\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"member\",\"type\":\"address\"}],\"name\":\"getMemberInfo\",\"outputs\":[{\"components\":[{\"internalType\":\"enum Data.memberStatus\",\"name\":\"status\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"joinTime\",\"type\":\"uint256\"}],\"internalType\":\"struct Data.member[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"dao\",\"type\":\"address\"}],\"name\":\"getMembersCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"dao\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"member\",\"type\":\"address\"}],\"name\":\"isActiveMember\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"chixx.eth & mourad\",\"kind\":\"dev\",\"methods\":{\"getAddrById(address,uint256)\":{\"params\":{\"dao\":\"address of the dao\",\"id\":\"id of the member\"},\"returns\":{\"_0\":\"member address of the member\"}},\"getMemberInfo(address,address)\":{\"params\":{\"dao\":\"address of the dao\",\"member\":\"address of the member\"},\"returns\":{\"_0\":\"memberInfo struct that store info of the member see Data.sol\"}},\"getMembersCount(address)\":{\"params\":{\"dao\":\"address of the dao\"},\"returns\":{\"_0\":\"count uint256 of the total member in the dao\"}},\"isActiveMember(address,address)\":{\"params\":{\"dao\":\"address of the dao\",\"member\":\"address of the user to check\"},\"returns\":{\"_0\":\"bool true or false if is active\"}}},\"title\":\"IMembersDao\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getAddrById(address,uint256)\":{\"notice\":\"get address of a member in a dao by his id\"},\"getMemberInfo(address,address)\":{\"notice\":\"get info of a member in a dao\"},\"getMembersCount(address)\":{\"notice\":\"get the total member of the dao\"},\"isActiveMember(address,address)\":{\"notice\":\"return if a address is member of a dao\"}},\"notice\":\"Interface for membership module\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Modules/Interfaces/IMembersDao.sol\":\"IMembersDao\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Data.sol\":{\"keccak256\":\"0x13913eafbc91dcd34625eab1718ba891818d046332cd9b7ed33c3f0b6174c601\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://556898c4b2d77f28a8b163774f769e4210de6b57b5fd081cb67dd4a65578ffdf\",\"dweb:/ipfs/QmXqbpXnVwQboq2s9wY73RZbkB3AL9rmzwKQVy4Fkm3VVV\"]},\"project:/contracts/Modules/Interfaces/IMembersDao.sol\":{\"keccak256\":\"0x1357ef1d6971ce4fd1e165355107220f275ee436b3b43fb2ee75b088c8451b1d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f027aaefd9646b825fa3e73e2c63e6a1eb7a4261137f1a6c71b5534da5c8fa7e\",\"dweb:/ipfs/QmeU9ygAADM6LBJeVA99uQeLCnSiT8kZuvT7eMt2sa2uVn\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.9;\r\n\r\nimport \"../../Data.sol\";\r\n\r\n/**\r\n* @title IMembersDao\r\n* @author chixx.eth & mourad\r\n* @notice Interface for membership module\r\n*/\r\ninterface IMembersDao {\r\n  /**\r\n  * @notice get address of a member in a dao by his id\r\n  * @param dao address of the dao\r\n  * @param id id of the member\r\n  * @return member address of the member\r\n  */\r\n  function getAddrById(address dao, uint256 id) external view returns(address);\r\n\r\n  /**\r\n  * @notice get the total member of the dao\r\n  * @param dao address of the dao\r\n  * @return count uint256 of the total member in the dao\r\n  */\r\n  function getMembersCount(address dao) external view returns(uint256);\r\n\r\n  /**\r\n  * @notice get info of a member in a dao\r\n  * @param dao address of the dao\r\n  * @param member address of the member\r\n  * @return memberInfo struct that store info of the member see Data.sol\r\n  */\r\n  function getMemberInfo(address dao, address member) external view returns(Data.member[] memory);\r\n\r\n  /**\r\n  * @notice return if a address is member of a dao\r\n  * @param dao address of the dao\r\n  * @param member address of the user to check\r\n  * @return bool true or false if is active\r\n  */\r\n  function isActiveMember(address dao, address member) external view returns(bool);\r\n}",
+  "sourcePath": "C:\\Users\\mdmou\\source\\repos\\MY-DAO\\contracts\\Modules\\Interfaces\\IMembersDao.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Modules/Interfaces/IMembersDao.sol",
+    "exportedSymbols": {
+      "Data": [
+        1414
+      ],
+      "IMembersDao": [
+        4758
+      ]
+    },
+    "id": 4759,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4715,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:18"
+      },
+      {
+        "absolutePath": "project:/contracts/Data.sol",
+        "file": "../../Data.sol",
+        "id": 4716,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 4759,
+        "sourceUnit": 1415,
+        "src": "60:24:18",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMembersDao",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 4717,
+          "nodeType": "StructuredDocumentation",
+          "src": "88:102:18",
+          "text": " @title IMembersDao\n @author chixx.eth & mourad\n @notice Interface for membership module"
+        },
+        "fullyImplemented": false,
+        "id": 4758,
+        "linearizedBaseContracts": [
+          4758
+        ],
+        "name": "IMembersDao",
+        "nameLocation": "202:11:18",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 4718,
+              "nodeType": "StructuredDocumentation",
+              "src": "219:174:18",
+              "text": " @notice get address of a member in a dao by his id\n @param dao address of the dao\n @param id id of the member\n @return member address of the member"
+            },
+            "functionSelector": "945da9a1",
+            "id": 4727,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAddrById",
+            "nameLocation": "406:11:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4723,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4720,
+                  "mutability": "mutable",
+                  "name": "dao",
+                  "nameLocation": "426:3:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4727,
+                  "src": "418:11:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4719,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "418:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4722,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "439:2:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4727,
+                  "src": "431:10:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4721,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "431:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "417:25:18"
+            },
+            "returnParameters": {
+              "id": 4726,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4725,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4727,
+                  "src": "465:7:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4724,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "465:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "464:9:18"
+            },
+            "scope": 4758,
+            "src": "397:77:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 4728,
+              "nodeType": "StructuredDocumentation",
+              "src": "480:147:18",
+              "text": " @notice get the total member of the dao\n @param dao address of the dao\n @return count uint256 of the total member in the dao"
+            },
+            "functionSelector": "760b9c34",
+            "id": 4735,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMembersCount",
+            "nameLocation": "640:15:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4731,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4730,
+                  "mutability": "mutable",
+                  "name": "dao",
+                  "nameLocation": "664:3:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4735,
+                  "src": "656:11:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4729,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "656:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "655:13:18"
+            },
+            "returnParameters": {
+              "id": 4734,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4733,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4735,
+                  "src": "691:7:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4732,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "691:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "690:9:18"
+            },
+            "scope": 4758,
+            "src": "631:69:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 4736,
+              "nodeType": "StructuredDocumentation",
+              "src": "706:202:18",
+              "text": " @notice get info of a member in a dao\n @param dao address of the dao\n @param member address of the member\n @return memberInfo struct that store info of the member see Data.sol"
+            },
+            "functionSelector": "36048d5f",
+            "id": 4747,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMemberInfo",
+            "nameLocation": "921:13:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4741,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4738,
+                  "mutability": "mutable",
+                  "name": "dao",
+                  "nameLocation": "943:3:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4747,
+                  "src": "935:11:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4737,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "935:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4740,
+                  "mutability": "mutable",
+                  "name": "member",
+                  "nameLocation": "956:6:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4747,
+                  "src": "948:14:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4739,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "948:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "934:29:18"
+            },
+            "returnParameters": {
+              "id": 4746,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4745,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4747,
+                  "src": "986:20:18",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_member_$1353_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Data.member[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 4743,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 4742,
+                        "name": "Data.member",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 1353,
+                        "src": "986:11:18"
+                      },
+                      "referencedDeclaration": 1353,
+                      "src": "986:11:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_member_$1353_storage_ptr",
+                        "typeString": "struct Data.member"
+                      }
+                    },
+                    "id": 4744,
+                    "nodeType": "ArrayTypeName",
+                    "src": "986:13:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_member_$1353_storage_$dyn_storage_ptr",
+                      "typeString": "struct Data.member[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "985:22:18"
+            },
+            "scope": 4758,
+            "src": "912:96:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 4748,
+              "nodeType": "StructuredDocumentation",
+              "src": "1014:189:18",
+              "text": " @notice return if a address is member of a dao\n @param dao address of the dao\n @param member address of the user to check\n @return bool true or false if is active"
+            },
+            "functionSelector": "8ecf7720",
+            "id": 4757,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isActiveMember",
+            "nameLocation": "1216:14:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4753,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4750,
+                  "mutability": "mutable",
+                  "name": "dao",
+                  "nameLocation": "1239:3:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4757,
+                  "src": "1231:11:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4749,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1231:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4752,
+                  "mutability": "mutable",
+                  "name": "member",
+                  "nameLocation": "1252:6:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4757,
+                  "src": "1244:14:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4751,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1244:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1230:29:18"
+            },
+            "returnParameters": {
+              "id": 4756,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4755,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4757,
+                  "src": "1282:4:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4754,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1282:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1281:6:18"
+            },
+            "scope": 4758,
+            "src": "1207:81:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4759,
+        "src": "192:1099:18",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:1258:18"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/Modules/Interfaces/IMembersDao.sol",
+    "exportedSymbols": {
+      "Data": [
+        1414
+      ],
+      "IMembersDao": [
+        4758
+      ]
+    },
+    "id": 4759,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4715,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".9"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:18"
+      },
+      {
+        "absolutePath": "project:/contracts/Data.sol",
+        "file": "../../Data.sol",
+        "id": 4716,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 4759,
+        "sourceUnit": 1415,
+        "src": "60:24:18",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMembersDao",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 4717,
+          "nodeType": "StructuredDocumentation",
+          "src": "88:102:18",
+          "text": " @title IMembersDao\n @author chixx.eth & mourad\n @notice Interface for membership module"
+        },
+        "fullyImplemented": false,
+        "id": 4758,
+        "linearizedBaseContracts": [
+          4758
+        ],
+        "name": "IMembersDao",
+        "nameLocation": "202:11:18",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 4718,
+              "nodeType": "StructuredDocumentation",
+              "src": "219:174:18",
+              "text": " @notice get address of a member in a dao by his id\n @param dao address of the dao\n @param id id of the member\n @return member address of the member"
+            },
+            "functionSelector": "945da9a1",
+            "id": 4727,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAddrById",
+            "nameLocation": "406:11:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4723,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4720,
+                  "mutability": "mutable",
+                  "name": "dao",
+                  "nameLocation": "426:3:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4727,
+                  "src": "418:11:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4719,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "418:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4722,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "439:2:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4727,
+                  "src": "431:10:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4721,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "431:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "417:25:18"
+            },
+            "returnParameters": {
+              "id": 4726,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4725,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4727,
+                  "src": "465:7:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4724,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "465:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "464:9:18"
+            },
+            "scope": 4758,
+            "src": "397:77:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 4728,
+              "nodeType": "StructuredDocumentation",
+              "src": "480:147:18",
+              "text": " @notice get the total member of the dao\n @param dao address of the dao\n @return count uint256 of the total member in the dao"
+            },
+            "functionSelector": "760b9c34",
+            "id": 4735,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMembersCount",
+            "nameLocation": "640:15:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4731,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4730,
+                  "mutability": "mutable",
+                  "name": "dao",
+                  "nameLocation": "664:3:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4735,
+                  "src": "656:11:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4729,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "656:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "655:13:18"
+            },
+            "returnParameters": {
+              "id": 4734,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4733,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4735,
+                  "src": "691:7:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4732,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "691:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "690:9:18"
+            },
+            "scope": 4758,
+            "src": "631:69:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 4736,
+              "nodeType": "StructuredDocumentation",
+              "src": "706:202:18",
+              "text": " @notice get info of a member in a dao\n @param dao address of the dao\n @param member address of the member\n @return memberInfo struct that store info of the member see Data.sol"
+            },
+            "functionSelector": "36048d5f",
+            "id": 4747,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getMemberInfo",
+            "nameLocation": "921:13:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4741,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4738,
+                  "mutability": "mutable",
+                  "name": "dao",
+                  "nameLocation": "943:3:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4747,
+                  "src": "935:11:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4737,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "935:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4740,
+                  "mutability": "mutable",
+                  "name": "member",
+                  "nameLocation": "956:6:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4747,
+                  "src": "948:14:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4739,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "948:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "934:29:18"
+            },
+            "returnParameters": {
+              "id": 4746,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4745,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4747,
+                  "src": "986:20:18",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_member_$1353_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct Data.member[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 4743,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 4742,
+                        "name": "Data.member",
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 1353,
+                        "src": "986:11:18"
+                      },
+                      "referencedDeclaration": 1353,
+                      "src": "986:11:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_member_$1353_storage_ptr",
+                        "typeString": "struct Data.member"
+                      }
+                    },
+                    "id": 4744,
+                    "nodeType": "ArrayTypeName",
+                    "src": "986:13:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_member_$1353_storage_$dyn_storage_ptr",
+                      "typeString": "struct Data.member[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "985:22:18"
+            },
+            "scope": 4758,
+            "src": "912:96:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 4748,
+              "nodeType": "StructuredDocumentation",
+              "src": "1014:189:18",
+              "text": " @notice return if a address is member of a dao\n @param dao address of the dao\n @param member address of the user to check\n @return bool true or false if is active"
+            },
+            "functionSelector": "8ecf7720",
+            "id": 4757,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isActiveMember",
+            "nameLocation": "1216:14:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4753,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4750,
+                  "mutability": "mutable",
+                  "name": "dao",
+                  "nameLocation": "1239:3:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4757,
+                  "src": "1231:11:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4749,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1231:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4752,
+                  "mutability": "mutable",
+                  "name": "member",
+                  "nameLocation": "1252:6:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4757,
+                  "src": "1244:14:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4751,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1244:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1230:29:18"
+            },
+            "returnParameters": {
+              "id": 4756,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4755,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4757,
+                  "src": "1282:4:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4754,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1282:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1281:6:18"
+            },
+            "scope": 4758,
+            "src": "1207:81:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4759,
+        "src": "192:1099:18",
+        "usedErrors": []
+      }
+    ],
+    "src": "33:1258:18"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.9+commit.e5eed63a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.4",
+  "updatedAt": "2022-05-24T10:08:19.663Z",
+  "devdoc": {
+    "author": "chixx.eth & mourad",
+    "kind": "dev",
+    "methods": {
+      "getAddrById(address,uint256)": {
+        "params": {
+          "dao": "address of the dao",
+          "id": "id of the member"
+        },
+        "returns": {
+          "_0": "member address of the member"
+        }
+      },
+      "getMemberInfo(address,address)": {
+        "params": {
+          "dao": "address of the dao",
+          "member": "address of the member"
+        },
+        "returns": {
+          "_0": "memberInfo struct that store info of the member see Data.sol"
+        }
+      },
+      "getMembersCount(address)": {
+        "params": {
+          "dao": "address of the dao"
+        },
+        "returns": {
+          "_0": "count uint256 of the total member in the dao"
+        }
+      },
+      "isActiveMember(address,address)": {
+        "params": {
+          "dao": "address of the dao",
+          "member": "address of the user to check"
+        },
+        "returns": {
+          "_0": "bool true or false if is active"
+        }
+      }
+    },
+    "title": "IMembersDao",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "getAddrById(address,uint256)": {
+        "notice": "get address of a member in a dao by his id"
+      },
+      "getMemberInfo(address,address)": {
+        "notice": "get info of a member in a dao"
+      },
+      "getMembersCount(address)": {
+        "notice": "get the total member of the dao"
+      },
+      "isActiveMember(address,address)": {
+        "notice": "return if a address is member of a dao"
+      }
+    },
+    "notice": "Interface for membership module",
+    "version": 1
+  }
+}
